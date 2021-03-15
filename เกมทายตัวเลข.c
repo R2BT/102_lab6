@@ -1,24 +1,19 @@
 #include<stdio.h>
-int push(int *n1,int *n2)
-{
-    printf("%d",n1);
-
-
-}
 int main()
 {
-    int n,num1,num2;
+    int n,i,correct=0,incorrect=0;
     scanf("%d",&n);
-    scanf("%d",&num1);
-    scanf("%d",&num2);
-    push(&num1,&num2);
-
-
-
-
-
-
-
-
+    char num1[n],num2[n];
+    scanf("%s",num1);
+    scanf("%s",num2);
+    for(i=0; i<n; i++)
+    {
+        if(num1[i]==num2[i])
+        {
+            correct++;
+        }
+    }
+    incorrect = n-correct ;
+    printf("%d %d",correct,incorrect);
     return 0;
 }
