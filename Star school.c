@@ -6,14 +6,18 @@ int main()
     int friend[n];
     for(i=0;i<n;i++)
     {
-        friend[i] = 0;
+        friend[i]=0;
     }
-    for(i=0;i<n,i++;)
+    //input score
+    for(i=0;i<n;i++)
     {
         scanf("%d %d",&x,&y);
         friend[x-1]+=1;
         friend[y-1]+=1;
+        min=friend[0];
+        max=friend[0];
     }
+
     for(i=0;i<n;i++)
     {
         if(friend[i]<min)
@@ -25,6 +29,7 @@ int main()
             max=friend[i];
         }
     }
+    //show max
     for(i=0;i<n;i++)
     {
         if(friend[i]==max)
@@ -33,11 +38,12 @@ int main()
             break;
         }
     }
+    //show min
     for(i=0;i<n;i++)
     {
         if(friend[i]==min)
         {
-            printf("%d",i+1);
+            printf(" %d",i+1);
             break;
         }
     }
