@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,min=0,max=0,x,y;
+    int n,i,min=0,max=0,x,y,r1,r2;
     scanf("%d",&n);
     int friend[n];
     for(i=0;i<n;i++)
@@ -34,7 +34,7 @@ int main()
     {
         if(friend[i]==max)
         {
-            printf("%d",i+1);
+             r1=friend[i];
             break;
         }
     }
@@ -43,9 +43,10 @@ int main()
     {
         if(friend[i]==min)
         {
-            printf(" %d",i+1);
+            r2=friend[i];
             break;
         }
     }
+    printf("%d %d",r1,r2);
     return 0;
 }
